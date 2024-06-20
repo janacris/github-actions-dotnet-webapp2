@@ -21,10 +21,10 @@ jobs:
         dotnet-version: '8.0.x'
 
     - name: Install dependencies
-      run: dotnet restore github4women/github4women.csproj
+      run: dotnet restore **/*.csproj 
 
     - name: Build
-      run: dotnet build github4women/github4women.csproj --no-restore
+      run: dotnet build **/*.csproj --no-restore
 
     - name: Custom Script
       run: |
